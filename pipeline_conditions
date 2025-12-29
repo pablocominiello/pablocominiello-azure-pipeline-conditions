@@ -34,7 +34,6 @@ stages:
     dependsOn: 
       - DeployUS1
       - DeployUS2
-    condition: succeeded('succeeded!!!')
     jobs:
       - job: DeployEurope
         steps:

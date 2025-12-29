@@ -25,6 +25,7 @@ stages:
 
   - stage: DeployUS2
     dependsOn: Test
+    condition: failed() # runs when Test failed
     jobs:
       - job: DeployUS2
         steps:
@@ -34,6 +35,7 @@ stages:
     dependsOn: 
       - DeployUS1
       - DeployUS2
+    condition: always()   # runs always
     jobs:
       - job: DeployEurope
         steps:

@@ -29,7 +29,6 @@ stages:
       - job: DeployUS2
         steps:
         - script: echo Deploying to US2
-    condition: failed()
 
   - stage: DeployEurope
     dependsOn: 

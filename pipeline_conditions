@@ -9,7 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
-steps:
-- script: echo Welcome to PEC eco systems.
-  displayName: 'welcome PEC'
+stages:
+  - stage: Test
+    jobs:
+    - job: Test
+      steps:
+      - script: echo va  
